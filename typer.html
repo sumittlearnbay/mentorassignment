@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Country</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1a1345, #2e2565);
+      font-family: 'Comic Sans MS', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .menu-icon {
+      background: linear-gradient(45deg, #d28af8, #aa62f8);
+      border-radius: 50%;
+      padding: 12px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .progress-heart {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .progress-bar {
+      width: 100px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 60%;
+      height: 100%;
+      background-color: #a5ffda;
+    }
+
+    .heart {
+      font-size: 24px;
+      color: #ff5aa2;
+    }
+
+    .category {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .word-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 50px);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .letter-box {
+      width: 50px;
+      height: 50px;
+      background-color: #2a3087;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .letter-box.empty {
+      background-color: #1f1f40;
+    }
+
+    .keyboard {
+      display: grid;
+      grid-template-columns: repeat(9, 40px);
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .key {
+      width: 40px;
+      height: 40px;
+      background-color: #ffffff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .key.used {
+      background-color: #555;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="menu-icon">☰</div>
+    <div class="progress-heart">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="heart">❤</div>
+    </div>
+  </div>
+
+  <div class="category">Countries</div>
+
+  <div class="word-grid">
+    <div class="letter-box">U</div>
+    <div class="letter-box">N</div>
+    <div class="letter-box">I</div>
+    <div class="letter-box empty"></div>
+    <div class="letter-box empty"></div>
+    <div class="letter-box empty"></div>
+    <div class="letter-box">D</div>
+
+    <div class="letter-box empty"></div>
+    <div class="letter-box">I</div>
+    <div class="letter-box">N</div>
+    <div class="letter-box">D</div>
+    <div class="letter-box">O</div>
+    <div class="letter-box empty"></div>
+    <div class="letter-box empty"></div>
+  </div>
+
+  <div class="keyboard">
+    <div class="key">A</div>
+    <div class="key">B</div>
+    <div class="key">C</div>
+    <div class="key used">D</div>
+    <div class="key">E</div>
+    <div class="key">F</div>
+    <div class="key">G</div>
+    <div class="key">H</div>
+    <div class="key used">I</div>
+    
+    <div class="key">J</div>
+    <div class="key">K</div>
+    <div class="key">L</div>
+    <div class="key">M</div>
+    <div class="key">N</div>
+    <div class="key used">O</div>
+    <div class="key">P</div>
+    <div class="key">Q</div>
+    <div class="key">R</div>
+
+    <div class="key">S</div>
+    <div class="key">T</div>
+    <div class="key">U</div>
+    <div class="key">V</div>
+    <div class="key">W</div>
+    <div class="key">X</div>
+    <div class="key">Y</div>
+    <div class="key">Z</div>
+  </div>
+
+</body>
+</html>

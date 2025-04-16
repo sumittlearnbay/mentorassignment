@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mortgage Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf6fb;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .calculator-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .form-section {
+      padding: 40px;
+    }
+
+    .form-section h2 {
+      margin-bottom: 30px;
+      font-size: 22px;
+      color: #222;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-row .form-group {
+      flex: 1;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .calculate-btn {
+      background-color: #d6e22f;
+      color: #000;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    .calculate-btn:hover {
+      background-color: #cbd92a;
+    }
+
+    .results-section {
+      background-color: #062c3e;
+      color: #fff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .results-section img {
+      width: 140px;
+      margin: 0 auto 20px;
+    }
+
+    .results-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .results-section p {
+      font-size: 14px;
+      color: #cfd8dc;
+    }
+
+    @media (max-width: 768px) {
+      .calculator-container {
+        grid-template-columns: 1fr;
+      }
+
+      .results-section {
+        border-top: 1px solid #ddd;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container">
+  <!-- Left Side: Form -->
+  <div class="form-section">
+    <h2>Mortgage Calculator <a href="#" style="float:right; font-size: 12px; text-decoration: underline; color: #888;">Clear All</a></h2>
+    
+    <div class="form-group">
+      <label for="amount">Mortgage Amount</label>
+      <input type="text" id="amount" placeholder="£">
+    </div>
+
+    <div class="input-row">
+      <div class="form-group">
+        <label for="term">Mortgage Term</label>
+        <input type="number" id="term" placeholder="Years">
+      </div>
+      <div class="form-group">
+        <label for="rate">Interest Rate</label>
+        <input type="number" id="rate" placeholder="%">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Mortgage Type</label>
+      <div class="radio-group">
+        <label><input type="radio" name="mortgage-type" value="repayment"> Repayment</label>
+        <label><input type="radio" name="mortgage-type" value="interest-only"> Interest Only</label>
+      </div>
+    </div>
+
+    <button class="calculate-btn">📊 Calculate Repayments</button>
+  </div>
+
+  <!-- Right Side: Results -->
+  <div class="results-section">
+    <img src="https://cdn-icons-png.flaticon.com/512/2840/2840194.png" alt="Calculation Icon" />
+    <h3>Results shown here</h3>
+    <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+  </div>
+</div>
+
+</body>
+</html>

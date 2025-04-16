@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Info Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-row-gap: 25px;
+      grid-column-gap: 20px;
+    }
+    .form-title {
+      grid-column: span 2;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      align-self: center;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .checkbox-group label {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .checkbox-group input {
+      margin-right: 8px;
+    }
+    button {
+      grid-column: span 2;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="form-container" action="#" method="POST">
+    <div class="form-title">Personal Info Form</div>
+
+    <!-- Section 1: Your Info -->
+    <label>Your Info</label>
+    <div>
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required style="margin-top: 10px;" />
+      <input type="tel" name="phone" placeholder="Phone Number" required style="margin-top: 10px;" />
+    </div>
+
+    <!-- Section 2: Add-ons -->
+    <label>Add-ons</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="addon1" value="storage" /> Extra Cloud Storage</label>
+      <label><input type="checkbox" name="addon2" value="support" /> Priority Support</label>
+      <label><input type="checkbox" name="addon3" value="team-access" /> Team Access</label>
+    </div>
+
+    <!-- Section 3: Salary -->
+    <label>Salary</label>
+    <div>
+      <input type="number" name="salary" placeholder="Expected Salary" required />
+    </div>
+
+    <button type="submit">Next Step</button>
+  </form>
+
+</body>
+</html>
